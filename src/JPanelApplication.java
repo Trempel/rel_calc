@@ -82,19 +82,178 @@ public class JPanelApplication extends JPanel{
         add(bMinus);
         add(bMult);
         add(bDiv);
-
-        b1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                txt1.setText(txt1.getText() +1);
-                if (res ==0)
-                {
-                    res = Integer.valueOf(txt1.getText());
-                }else {
-                    res1 = Integer.valueOf(txt1.getText());
-                }
+try {
+    b1.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent arg1) {
+            txt1.setText(txt1.getText() + 1);
+            if (res == 0) {
+                res = Integer.valueOf(txt1.getText());
+            } else {
+                res1 = Integer.valueOf(txt1.getText());
             }
-        });
-    }
+        }
+    });
 
+    b2.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent arg1) {
+            txt1.setText(txt1.getText() + 2);
+            if (res == 0) {
+                res = Integer.valueOf(txt1.getText());
+            } else {
+                res1 = Integer.valueOf(txt1.getText());
+            }
+        }
+    });
+
+    b3.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent arg1) {
+            txt1.setText(txt1.getText() + 3);
+            if (res == 0) {
+                res = Integer.valueOf(txt1.getText());
+            } else {
+                res1 = Integer.valueOf(txt1.getText());
+            }
+        }
+    });
+    b4.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent arg1) {
+            txt1.setText(txt1.getText() + 4);
+            if (res == 0) {
+                res = Integer.valueOf(txt1.getText());
+            } else {
+                res1 = Integer.valueOf(txt1.getText());
+            }
+        }
+    });
+
+    b5.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent arg1) {
+            txt1.setText(txt1.getText() + 5);
+            if (res == 0) {
+                res = Integer.valueOf(txt1.getText());
+            } else {
+                res1 = Integer.valueOf(txt1.getText());
+            }
+        }
+    });
+
+    b6.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent arg1) {
+            txt1.setText(txt1.getText() + 6);
+            if (res == 0) {
+                res = Integer.valueOf(txt1.getText());
+            } else {
+                res1 = Integer.valueOf(txt1.getText());
+            }
+        }
+    });
+
+    b7.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent arg1) {
+            txt1.setText(txt1.getText() + 7);
+            if (res == 0) {
+                res = Integer.valueOf(txt1.getText());
+            } else {
+                res1 = Integer.valueOf(txt1.getText());
+            }
+        }
+    });
+
+    b8.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent arg1) {
+            txt1.setText(txt1.getText() + 8);
+            if (res == 0) {
+                res = Integer.valueOf(txt1.getText());
+            } else {
+                res1 = Integer.valueOf(txt1.getText());
+            }
+        }
+    });
+
+    b9.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent arg1) {
+            txt1.setText(txt1.getText() + 9);
+            if (res == 0) {
+                res = Integer.valueOf(txt1.getText());
+            } else {
+                res1 = Integer.valueOf(txt1.getText());
+            }
+        }
+    });
+
+    b0.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent arg1) {
+            txt1.setText(txt1.getText() + 0);
+            if (res == 0) {
+                res = Integer.valueOf(txt1.getText());
+            } else {
+                res1 = Integer.valueOf(txt1.getText());
+            }
+        }
+    });
+
+    bPlus.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent arg1) {
+            res = Integer.valueOf(txt1.getText());
+            txt1.setText("");
+            op = "+";
+        }
+    });
+
+    bMinus.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent arg1) {
+            res = Integer.valueOf(txt1.getText());
+            txt1.setText("");
+            op = "-";
+        }
+    });
+
+    bDiv.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent arg1) {
+            res = Integer.valueOf(txt1.getText());
+            txt1.setText("");
+            op = "/";
+        }
+    });
+
+    bMult.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent arg1) {
+            res = Integer.valueOf(txt1.getText());
+            txt1.setText("");
+            op = "*";
+        }
+    });
+
+    bRes.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent arg0) {
+            int num = Integer.valueOf(res);
+            int num1 = Integer.valueOf(res1);
+            String strOp = op;
+
+            CalcMethod mc = new CalcMethod();
+            String strRes = String.valueOf(mc.calc(num, strOp, num1));
+            txt1.setText(strRes);
+        }
+    });
+}
+        catch (ArithmeticException e)
+        {
+         //TODO
+        }
+    }
 }
