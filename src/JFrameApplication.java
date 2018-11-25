@@ -1,12 +1,12 @@
-import javax.swing.*;
-
-public class JFrameApplication extends JFrame {
+import javax.swing.JFrame;
+public class JFrameApplication extends JFrame
+{
     public JFrameApplication()
     {
-        setBounds(100,100,300,450);
-        setTitle("Calc for demo");
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        JPanelApplication panel = new JPanelApplication();
+        setBounds(100, 100, 265, 400);
+        setTitle("Calculator");
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        add( new JPanelApplication());
         setVisible(true);
     }
 }
